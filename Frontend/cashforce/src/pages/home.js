@@ -1,10 +1,11 @@
 import React from "react";
 import cashforce from '../icon/cashforce.png'
 import handshake from '../icon/handshake.png'
-import './sideBar.css';
+import './home.css';
+import Table from "../components/table/table";
 
 
-class SideBar extends React.Component {
+class HomePage extends React.Component {
     render() {
         return (
             <div className='container'>
@@ -12,7 +13,7 @@ class SideBar extends React.Component {
                 <div className="sider-fornecedor">
 
                     <div className="menu-hero">
-              <img src={ cashforce } alt='this is a CashForce logo' />
+              <img src={ cashforce } alt='CashForce logo' />
                     </div>
                                         
                     <div className="menu-item">
@@ -24,22 +25,12 @@ class SideBar extends React.Component {
                                     <img src={ handshake } alt="HandShake SVG"></img>
                                      Notas fiscais
                                 </li>
-                            
                              </ul>
-                        </div>
-                          
+                        </div>  
                         </div>
                     </div>
-
                 </div>
               </div>
-
-
-
-
-
-
-
 
               <div className='main-content'>
                 <div className='header-sistema'>
@@ -51,10 +42,13 @@ class SideBar extends React.Component {
                   </div>
                   <p className='proposal'>Visualize as notas fiscais que você tem.</p>
                 </div>
-                  <span> AQUI VAI AS NOTAS FISCAIS</span>
+                <div><Table/></div>
               </div>
+              
+              {/* <div><Table /></div> */}
             </div>
+           
           );
         }
     }        
-export default SideBar;
+export default HomePage;
