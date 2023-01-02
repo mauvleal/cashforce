@@ -1,5 +1,4 @@
 import React from "react";
-import Table from "../components/table";
 import handshake from "../icon/handshake.png";
 import "./invoices.css";
 
@@ -14,7 +13,27 @@ class Invoices extends React.Component {
           </div>
           <p className="proposal">Visualize as notas fiscais que você tem.</p>
         </section>
-        <Table/>
+        <section className="notas">
+          <div className="cabecalho">
+            <ul className="table-header">
+              <li>
+                <div className="col-1">NOTA FISCAL</div>
+                <div className="col-2">SACADO</div>
+                <div className="col-3">CEDENTE</div>
+                <div className="col-4">EMISSÃO</div>
+                <div className="col-5">VALOR</div>
+                <div className="col-6">STATUS</div>
+                <div className="col-7"></div>
+              </li>
+            </ul>
+          </div>
+          
+            <div className="row">
+              <button className="button"> Dados do Cedente</button>
+            </div>
+     
+         
+        </section>
       </main>
     );
   }

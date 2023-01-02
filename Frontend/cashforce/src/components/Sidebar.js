@@ -1,7 +1,7 @@
 import React from "react";
 import cashforce from '../icon/cashforce.png'
 import handshake from '../icon/handshake.png'
-import './sidebar.css';
+import { Link } from 'react-router-dom';
 
 
 class SideBar extends React.Component {
@@ -14,11 +14,13 @@ class SideBar extends React.Component {
               <img src={ cashforce } alt='CashForce logo' />
                     </div>
                                         
+                                <Link to="/invoices" style={{textDecoration: 'none'}}>
                     <div className="menu-item">
                         <div className="ret">
 
                         <div className="menu-item-selected">    
                             <ul className='menu-item-frame-1'>
+
                                 <li>
                                     <img src={ handshake } alt="HandShake SVG"></img>
                                      Notas fiscais
@@ -27,6 +29,9 @@ class SideBar extends React.Component {
                         </div>  
                         </div>
                     </div>
+                                </Link>
+
+                                
                 </div>
               
             </main>

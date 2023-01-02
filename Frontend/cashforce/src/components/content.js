@@ -1,7 +1,6 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import Invoices from "../pages/Invoices";
-import "./content.css";
 import Header from "./header";
 
 class Content extends React.Component {
