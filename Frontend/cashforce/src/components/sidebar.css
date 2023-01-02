@@ -1,22 +1,6 @@
-.container {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: stretch;
-    display: flex;
-    position: relative;
-    background-color: #FBFDFE;
-    height: 900px;
-    width: 1560px;
-    left: 0px;
-    top: 0px;
-    border-radius: 0px;
-
-  }
-
 .sider-financiador {
     margin: 0;
-    color: #00AD8C;
+    color: blue;
     padding: 0;
     list-style-type: none;
     width: 288px;
@@ -127,75 +111,3 @@
     max-width: 288px;
     max-height: 80px;
   }
-  
-  .main-content {
-    display: flex;
-    flex-direction: column;
-    min-width: 1272px;
-    min-height: 900px;
-    background-color: #FFFFFF;
-    box-shadow: 0px 10px 30px 0px #E1E5EC80;
-  }
-  
-  .header-sistema {
-    height: 64px;
-    background-color: #FFFFFF;
-    border-bottom: 1px solid #DFE2EB;
-  }
-  
-  .frame {
-    max-width: 255px;
-    max-height: 53px;
-    color: #021B51;
-    padding: 40px 0px 0px 43px;
-  }
-  
-  
-  .handShake {
-    display: flex;
-    flex-direction: row;
-    max-width: 182px;
-    max-height: 28px;
-    align-items: center;
-    justify-content: center;
-    gap: 9px;
-    flex-wrap: nowrap;
-  }
-  
-  .handShake p {
-    font-family: DM Sans;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 28px;
-    letter-spacing: 0em;
-    text-align: left;
-    margin: 0;
-    flex-wrap: nowrap;
-  }
-  
-  .proposal {
-    font-family: DM Sans;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    color: #727D94;
-    margin-top: 5px;
-    margin-bottom: 0px;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,0 +1,43 @@
+.frame {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 255px;
+  max-height: 53px;
+  padding: 50px;
+}
+
+.handShake {
+  display: flex;
+  flex-direction: row;
+  max-width: 182px;
+  max-height: 28px;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  flex-wrap: nowrap;
+}
+
+.handShake p {
+  width: 149px;
+  height: 28px;
+  font-family: DM Sans;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #021b51;
+}
+
+.proposal {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #727d94;
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
