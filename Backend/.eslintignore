@@ -1,2 +1,5 @@
 // .eslintignore
 node_modules
+**/migrations/
+**/seeders/
+**/models/
