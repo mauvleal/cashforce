@@ -1,4 +1,5 @@
 import React from "react";
+import InvoiceCard from "../components/invoiceCard";
 import handshake from "../icon/handshake.png";
 import "./invoices.css";
 
@@ -28,9 +29,7 @@ class Invoices extends React.Component {
             </ul>
           </div>
           
-            <div className="row">
-              <button className="button"> Dados do Cedente</button>
-            </div>
+         <InvoiceCard/>
      
          
         </section>
