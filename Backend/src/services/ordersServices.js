@@ -1,17 +1,11 @@
-const { Order, Buyer, Provider } = require('../database/models');
+const { Order } = require('../models');
 
-const getAllOrdersByUserId = async (id) => {
-  const orders = await Order.findAll({
-    where: { userid: id },
-    include: [
-      { model: Buyer, as: 'buyer' },
-      { model: Provider, as: 'provider' }
-    ]
-  });
+const getAll = async () => {
+  const orders = await Order.findAll();
 
   return orders;
 }
 
 module.exports = {
-  getAllOrdersByUserId,
+  getAll,
 };
