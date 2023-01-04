@@ -1,18 +1,26 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useCallback, useState } from "react";
 import InvoiceCard from "../components/invoiceCard";
 import handshake from "../icon/handshake.png";
 // import axios from "axios";
-import apiCalls from "../api/apiCalls";
+import api from "../api/api";
 import "./invoices.css";
 
 
 
 function Invoices() {
-  
+
+  const [orders, setOrders] = useState([]);
+
+  const allOrders = useCallback(async () => {
+    const resolve = await api();
+    setOrders(resolve);
+    console.log(orders);
+  }, [api]
+  );
+
+
   useEffect(() => {
-    apiCalls.getAllOrders().then((response) =>{
-    console.log(response);
-  })
+    allOrders();
   }, []);
 
 
