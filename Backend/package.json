@@ -15,6 +15,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "10.0",
     "express": "4.17",
     "lint": "^0.8.19",
@@ -29,6 +30,3 @@
     "sequelize-cli": "6.2"
   }
 }
-
-
-
