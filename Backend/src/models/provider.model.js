@@ -41,9 +41,15 @@ module.exports = (sequelize, DataTypes) => {
         sequelize,
       });
       
-      Provider.belongsTo(Cnpj, { foreignKey: 'cnpjId', as: 'cnpj' });
-      
-      Cnpj.hasMany(Provider, { foreignKey: 'id', as: 'providers' });
+      Provider.associate = (models) => {
+        Provider.hasMany(models.Order, { 
+          foreignKey: 'providerid', as: 'provider',
+        });
+        
+        Provider.belongsTo(models.CNPJ, { 
+          foreignKey: 'cnpjid', as: 'cnpj',
+        });
+      };
   
     return Provider;
     

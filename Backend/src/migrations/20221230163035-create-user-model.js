@@ -3,56 +3,81 @@ module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('users', {
       id: {
-        allowNull: false,
         autoIncrement: true,
-        primaryKey: true,
-        type: Sequelize.INTEGER(11)
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        primaryKey: true
       },
       name: {
-        allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.STRING(255),
+        allowNull: false
       },
       email: {
+        type: Sequelize.STRING(255),
         allowNull: false,
-        type: Sequelize.STRING,
-        unique: true
+        unique: "email"
       },
       phoneNumber: {
-        defaultValue: null,
-        type: Sequelize.STRING
+        type: Sequelize.STRING(255),
+        allowNull: true
       },
       mobile: {
-        defaultValue: null,
-        type: Sequelize.STRING
+        type: Sequelize.STRING(255),
+        allowNull: true
       },
       departament: {
-        defaultValue: null,
-        type: Sequelize.STRING
+        type: Sequelize.STRING(255),
+        allowNull: true
       },
       verificationCode: {
-        defaultValue: null,
-        type: Sequelize.STRING
+        type: Sequelize.STRING(255),
+        allowNull: true
       },
       emailChecked: {
-        defaultValue: 0,
-        type: Sequelize.TINYINT(1)
+        type: Sequelize.BOOLEAN,
+        allowNull: true,
+        defaultValue: 0
       },
       createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        allowNull: false
       },
       updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        allowNull: false
       },
       cashforceAdm: {
-        defaultValue: 0,
-        type: Sequelize.TINYINT(1)
+        type: Sequelize.BOOLEAN,
+        allowNull: true,
+        defaultValue: 0
       }
     }, {
-      charset: 'latin1'
+      Sequelize,
+      tableName: 'users',
+      timestamps: true,
+      indexes: [
+        {
+          name: "PRIMARY",
+          unique: true,
+          using: "BTREE",
+          fields: [
+            { name: "id" },
+          ]
+        },
+        {
+          name: "email",
+          unique: true,
+          using: "BTREE",
+          fields: [
+            { name: "email" },
+          ]
+        },
+      ]
     });
+
   },
+
+
   down: async (queryInterface, Sequelize) => {
     await queryInterface.dropTable('users');
   }

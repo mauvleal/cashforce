@@ -7,113 +7,36 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER(11)
+        type: Sequelize.INTEGER
+      },
+      cnpjid: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE',
+        references: { model:'cnpjs', key: 'id' }
       },
       name: {
-        allowNull: false,
         type: Sequelize.STRING
       },
       tradingName: {
-        defaultValue: null,
         type: Sequelize.STRING
       },
       cashforceTax: {
-        defaultValue: null,
         type: Sequelize.STRING
-      },
-      responsibleName: {
-        defaultValue: null,
-        type: Sequelize.STRING
-      },
-      responsibleEmail: {
-        defaultValue: null,
-        type: Sequelize.STRING
-      },
-      responsiblePosition: {
-        defaultValue: null,
-        type: Sequelize.STRING
-      },
-      responsiblePhone: {
-        defaultValue: null,
-        type: Sequelize.STRING
-      },
-      responsibleMobile: {
-        defaultValue: null,
-        type: Sequelize.STRING
-      },
-      website: {
-        defaultValue: null,
-        type: Sequelize.STRING
-      },
-      postalCode: {
-        defaultValue: null,
-        type: Sequelize.STRING
-      },
-      address: {
-        defaultValue: null,
-        type: Sequelize.STRING
-      },
-      number: {
-        defaultValue: null,
-        type: Sequelize.STRING
-      },
-      complement: {
-        defaultValue: null,
-        type: Sequelize.STRING
-      },
-      neighborhood: {
-        defaultValue: null,
-        type: Sequelize.STRING
-      },
-      city: {
-        defaultValue: null,
-        type: Sequelize.STRING
-      },
-      state: {
-        defaultValue: null,
-        type: Sequelize.STRING
-      },
-      phoneNumber: {
-        defaultValue: null,
-        type: Sequelize.STRING
-      },
-      situation: {
-        defaultValue: null,
-        type: Sequelize.STRING
-      },
-      situationDate: {
-        defaultValue: null,
-        type: Sequelize.STRING
-      },
-      createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      },
-      updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      },
-      cnpjId: {
-        defaultValue: null,
-        type: Sequelize.INTEGER(11),
-        references: {
-          model: 'cnpjs',
-          key: 'id'
-        },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
-        key: 'cnpjId'
       },
       confirm: {
-        defaultValue: 1,
-        type: Sequelize.TINYINT(1),
+        type: Sequelize.INTEGER(1),
+        defaultValue: 1
       },
-      email: {
-        defaultValue: null,
-        type: Sequelize.STRING
-      }
-    }, {
-      charset: 'latin1'
+      createdAt: {
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.fn('now')
+      },
+      updatedAt: {
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.fn('now')
+      },
     });
   },
 

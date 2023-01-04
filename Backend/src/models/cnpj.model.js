@@ -1,23 +1,17 @@
 module.exports = (sequelize, DataTypes) => {
-    const Cnpj = sequelize.define('Cnpj', {
-        id: {
-          type: DataTypes.INTEGER,
-          primaryKey: true,
-          allowNull: false,
-          autoIncrement: true,
-        },
-        cnpj: DataTypes.STRING,
-        companyType: DataTypes.STRING,
-        createdAt: DataTypes.DATE,
-        updatedAt: DataTypes.DATE,
-      }, {
-        timestamps: true,
-        modelName: 'Cnpj',
-        tableName: 'cnpjs',
-        charset: 'latin1',
-        sequelize,
-      });
-  
-    return Cnpj;
-    
-  }
+  const CNPJ = sequelize.define('CNPJ', {
+    name: DataTypes.STRING,
+    email: DataTypes.STRING,
+    emailChecked: DataTypes.INTEGER,
+    cashForceAdm: DataTypes.INTEGER,
+  },
+  { timestamps: false, tableName: 'cnpjs' });
+
+  CNPJ.associate = (models) => {
+    CNPJ.hasMany(models.Order, { 
+      foreignKey: 'cnpjid', as: 'cnpj',
+    });
+  };
+
+  return CNPJ;
+};

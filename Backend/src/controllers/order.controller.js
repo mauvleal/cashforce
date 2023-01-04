@@ -2,7 +2,7 @@ const OrderService = require('../services/order.service');
 
 const getAll = async (_req, res) => {
   try {
-    const orders = await UserService.getAll();
+    const orders = await OrderService.getAll();
     return res.status(200).json(orders);
   } catch (e) {
     console.log(e.message);

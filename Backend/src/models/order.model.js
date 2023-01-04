@@ -36,15 +36,24 @@ module.exports = (sequelize, DataTypes) => {
         sequelize,
       });
       
-      Order.belongsTo(Cnpj, { foreignKey: 'cnpjId', as: 'cnpj' });
-      Order.belongsTo(User, { foreignKey: 'userId', as: 'user' });
-      Order.belongsTo(Buyer, { foreignKey: 'buyerId', as: 'buyer' });
-      Order.belongsTo(Provider, { foreignKey: 'providerId', as: 'provider' });
+      Order.associate = (models) => {
+        Order.belongsTo(models.CNPJ, { 
+          foreignKey: 'cnpjid', as: 'cnpj',
+        });
+    
+        Order.belongsTo(models.User, { 
+          foreignKey: 'userid', as: 'user',
+        });
+    
+        Order.belongsTo(models.Buyer, { 
+          foreignKey: 'buyerid', as: 'buyer',
+        });
+    
+        Order.belongsTo(models.Provider, { 
+          foreignKey: 'providerid', as: 'provider',
+        });
+      };
       
-      Cnpj.hasMany(Order, { foreignKey: 'id', as: 'orders' });
-      User.hasMany(Order, { foreignKey: 'id', as: 'orders' });
-      Provider.hasMany(Order, { foreignKey: 'id', as: 'orders' });
-
     return Order;
     
   }

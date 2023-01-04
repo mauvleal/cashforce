@@ -10,24 +10,19 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       cnpj: {
-        allowNull: false,
-        type: Sequelize.STRING,
-        unique: true
+        type: Sequelize.STRING
       },
       companyType: {
-        allowNull: false,
         type: Sequelize.STRING
       },
       createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.fn('now')
       },
       updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      }
-    }, {
-      charset: 'latin1'
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.fn('now')
+      },
     });
   },
 
