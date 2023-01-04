@@ -29,13 +29,16 @@ __________________________________________________________________________
 3 - Entre no frontend com o backend rodando em segundo plano (preferencialmente outro Terminal)
 
   cd CashForce/frontend
+  
 Instale as dependencias e rode a aplicação
 
-comando para instalação dos pacotes e inicialização
+comando para instalação dos pacotes e inicialização:
+
   npm i && npm start
  __________________________________________________________________________
  
 4 - Caso a Api frontend não tenha inicializado automaticamente:
+
 localhost:3000
 
 5 - Abrirá a pagina genérica - clicando  no meu lateral " Notas Fiscais" abrirá as NFs
