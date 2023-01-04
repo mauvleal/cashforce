@@ -113,6 +113,7 @@
   width: 39px;
   left: 650px;
   top: 3px;
+  white-space: nowrap
 }
 
 .col-6 {
@@ -151,3 +152,45 @@
   white-space: nowrap;
 }
 
+
+.res1 {
+  position: absolute;
+  width: 77px;
+  left: 30px;
+  white-space: nowrap;
+}
+
+.res2 {
+  position: absolute;
+  width: 51px;
+  left: 201px;
+  height: 16px;
+}
+.res3 {
+  position: absolute;
+  height: 16px;
+  width: 54px;
+  left: 355px;
+}
+
+.res4 {
+  position: absolute;
+  height: 16px;
+  width: 53px;
+  left: 499px;
+}
+
+.res5 {
+  position: absolute;
+  height: 16px;
+  width: 39px;
+  left: 650px;
+  
+}
+
+.res6 {
+  position: absolute;
+  height: 16px;
+  width: 44px;
+  left: 821px;
+}

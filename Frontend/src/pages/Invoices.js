@@ -1,8 +1,6 @@
 import React, { useEffect, useState} from "react";
 import InvoiceCard from "../components/invoiceCard";
 import handshake from "../icon/handshake.png";
-// import axios from "axios";
-// import api from "../api/api";
 import "./invoices.css";
 import Axios from "axios";
 
