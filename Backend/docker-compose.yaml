@@ -4,10 +4,12 @@ services:
 
   db:
     image: mysql
+    container_name: db-cashforce
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: 1234
-      MYSQL_DATABASE: cashforce_v3
+      MYSQL_DATABASE: cashforcedb
     ports:
-      - "3307:3306"
+      - "3306:3306"
+      
 

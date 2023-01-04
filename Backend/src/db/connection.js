@@ -4,10 +4,10 @@ const mysql = require('mysql2/promise');
 
 const connection = mysql.createPool({
   host: 'localhost',
-  port: 33060,
+  port: 3307,
   user: 'root',
-  password: 'root',
-  database: 'trybecashdb',
+  password: '1234',
+  database: 'cashforcedb',
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0,
