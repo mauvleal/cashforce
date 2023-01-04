@@ -1,10 +1,21 @@
 import React from "react";
 
-class InvoiceCard extends React.Component {
-  render() {
+
+  function InvoiceCard ({order}) {
+
+console.log(order.orderNumber);
+
     return (
  
             <div className="row">
+            <div className="col-col1">{order.orderNfId}</div>
+            <div className="col-col2">{order.orderNfId}</div>
+            <div className="col-col3">{order.orderNfId}</div>
+            <div className="col-col4">{order.orderNfId}</div>
+            <div className="col-col5">{order.orderNfId}</div>
+            <div className="col-col6">{order.orderNfId}</div>
+
+             
               <button className="button"> Dados do Cedente</button>
             </div>
      
@@ -12,5 +23,5 @@ class InvoiceCard extends React.Component {
    
     );
   }
-}
+
 export default InvoiceCard;

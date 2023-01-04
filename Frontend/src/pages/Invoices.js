@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState} from "react";
 import InvoiceCard from "../components/invoiceCard";
 import handshake from "../icon/handshake.png";
 // import axios from "axios";
@@ -10,13 +10,13 @@ import Axios from "axios";
 
 function Invoices() {
 
-  // const [orders, setOrders] = useState([]);
+  const [orders, setOrders] = useState([]);
 
-  
+  console.log(orders);
 
   useEffect(() => {
     Axios.get("http://localhost:3001/orders").then((response) => {
-      console.log(response);
+      setOrders(response.data)
     })
   }, []);
 
@@ -44,10 +44,12 @@ function Invoices() {
             </li>
           </ul>
         </div>
-        
-       <InvoiceCard/>
-   
-       
+        { typeof orders !== "undefined" && orders.map((order) => {
+
+          return <InvoiceCard key={order.orderNfId} order={order} />
+    
+        })}
+
       </section>
     </main>
   );
