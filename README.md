@@ -14,7 +14,8 @@ Backend
 
 Front End
 - ReactJs;
-- Material UI;
+- react-router-dom;
+- CSS;
 - Axios para integração com o Backend;
 
 ### Sobre o Projeto
