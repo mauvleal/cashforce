@@ -70,7 +70,7 @@ npm i && npm start
 
 _____
 ## 4
--Caso a Api frontend não tenha inicializado automaticamente abra o navegador:
+- Caso a Api frontend não tenha inicializado automaticamente abra o navegador:
 
 ```
 localhost:3000
